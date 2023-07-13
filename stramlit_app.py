@@ -1,6 +1,7 @@
 import streamlit
 import requests
 import pandas
+import snowflake.connector
 
 streamlit.title("my parents new healthy diner")
 streamlit.header("Breakfast Menu")
@@ -28,6 +29,3 @@ streamlit.dataframe(fruits_to_show)
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response)
-
-
-import snowflake.connector
