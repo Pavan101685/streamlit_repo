@@ -30,7 +30,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 streamlit.dataframe(fruits_to_show)
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/Jackfruit")
 streamlit.text(fruityvice_response)
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
@@ -39,4 +39,3 @@ my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
-add_my_fruit = "jackfruit"
